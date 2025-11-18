@@ -17,7 +17,7 @@ import shutil
 from pathlib import Path
 
 # Initialize FastAPI app
-app = FastAPI(title="LinguaCheck API", version="2.0.0")
+app = FastAPI(title="EZIcheck-backend API", version="2.0.0")
 
 # Configure CORS (allows your frontend to communicate with backend)
 app.add_middleware(
@@ -482,7 +482,7 @@ def process_excel_file(file_path: str, output_path: str) -> dict:
 @app.get("/")
 async def root():
     return {
-        "message": "LinguaCheck API is running!",
+        "message": "EZIcheck-backend API is running!",
         "version": "2.0.0",
         "features": [
             "Language validation with 4 detectors",
